@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: inherit;
+}
+body {
+  background-color: black;
+}
+h1 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+  font-size: 40px;
+}
+.content {
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 80px;
+  border: 0.5px solid white;
+  color: white;
+}
+.time-24 {
+  font-family: "Lobster", "Cursive";
+  font-size: 140px;
+  padding: 45px;
+}
+.time-12 {
+  font-family: "Lobster", "Cursive";
+  font-size: 140px;
+  padding: 45px;
+}
+.hidden {
+  display: none;
+}
+footer {
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.button {
+  width: 50%;
+  margin-left: 45%;
+  margin-top: 10px;
+}
+.button-toggle {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Libre Baskerville", "Cursive";
+  font-size: 18px;
+  height: 32px;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.button-toggle:hover {
+  box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
+  opacity: 0.85;
+}

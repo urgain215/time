@@ -67,11 +67,14 @@ footer {
   opacity: 0.85;
 }
 
-@media (max-width: 600px) {
+@media (min-width: 480px) {
   .time-12 {
-    font-size: 50px;
+    font-size: 100px;
   }
   .time-24 {
-    font-size: 50px;
+    font-size: 100px;
+  }
+  .content {
+    margin-top: 400px;
   }
 }

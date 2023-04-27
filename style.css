@@ -24,12 +24,12 @@ h1 {
 .time-24 {
   font-family: "Lobster", "Cursive";
   font-size: 140px;
-  padding: 45px;
+  padding: 10px;
 }
 .time-12 {
   font-family: "Lobster", "Cursive";
   font-size: 140px;
-  padding: 45px;
+  padding: 10px;
 }
 .hidden {
   display: none;
@@ -65,4 +65,13 @@ footer {
 .button-toggle:hover {
   box-shadow: rgba(0, 1, 0, 0.2) 0 2px 8px;
   opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .time-12 {
+    font-size: 50px;
+  }
+  .time-24 {
+    font-size: 50px;
+  }
 }

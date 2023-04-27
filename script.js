@@ -22,7 +22,7 @@ const tick_12 = function () {
   let orihours = String(now.getHours()).padStart(2, 0);
   let newhours = orihours == "00" ? "12" : orihours;
   newhours =
-    orihours > "12" ? String(Number(orihours) - 12).padStart(2, 0) : orihours;
+    orihours > "12" ? String(Number(orihours) - 12).padStart(2, 0) : newhours;
   const secs = String(now.getSeconds()).padStart(2, 0);
 
   // timer12.textContent = `${hours}:${min}:${secs} ${

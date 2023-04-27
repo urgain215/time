@@ -4,7 +4,7 @@ const timer12 = document.querySelector(".time-12");
 const toggle = document.querySelector(".button-toggle");
 
 //24 hour format
-const tick = function () {
+const tick_24 = function () {
   const now = new Date();
   const min = String(now.getMinutes()).padStart(2, 0);
   const hours = String(now.getHours()).padStart(2, 0);
@@ -12,26 +12,28 @@ const tick = function () {
 
   timer24.textContent = `${hours}:${min}:${secs}`;
 };
-tick();
-setInterval(tick, 1000);
+tick_24();
+setInterval(tick_24, 1000);
 
 //12 hour format
-setInterval(function () {
+const tick_12 = function () {
   const now = new Date();
   const min = String(now.getMinutes()).padStart(2, 0);
-  // let hours = String(now.getHours()).padStart(2, 0);
-  let hours = String(now.getHours()).padStart(2, 0);
-  hours = hours == "00" ? "12" : hours;
-  hours = hours > "12" ? String(Number(hours) - 12) : hours;
+  let orihours = String(now.getHours()).padStart(2, 0);
+  let newhours = orihours == "00" ? "12" : orihours;
+  newhours =
+    orihours > "12" ? String(Number(orihours) - 12).padStart(2, 0) : orihours;
   const secs = String(now.getSeconds()).padStart(2, 0);
 
   // timer12.textContent = `${hours}:${min}:${secs} ${
   //   hours >= "12" ? "pm" : "am"
   // }`;
-  timer12.textContent = `${hours}${Number(secs) % 2 == 0 ? ":" : " "}${min} ${
-    hours >= "12" ? "pm" : "am"
-  }`;
-}, 1000);
+  timer12.textContent = `${newhours}${
+    Number(secs) % 2 == 0 ? ":" : " "
+  }${min} ${orihours >= "12" ? "pm" : "am"}`;
+};
+tick_12();
+setInterval(tick_12, 1000);
 
 //toggle button
 toggle.addEventListener("click", function (e) {
